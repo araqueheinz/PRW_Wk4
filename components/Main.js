@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, FlatList, ScrollView, Button, Alert } from 'react-native';
+import { StyleSheet, Text, View, TextInput, FlatList, ScrollView, Button, Alert, AsyncStorage } from 'react-native';
 import ExpenseList from './ExpenseList'
 
 
@@ -20,7 +20,12 @@ export default class Main extends React.Component {
 
    
     componentWillMount(){
-
+        // if(AsyncStorage.getItem('exList')) {
+        //     //declare a var to read the data as string and then convert to JSON
+        //     let exList = JSON.parse(localStorage.getItem('exList'))
+        //     //Updates the state with new var
+        //     this.setState({exList: exList})
+        // }
     }
     changeExpense = expense =>{
         
